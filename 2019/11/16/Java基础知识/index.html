@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>关于小站 | Caicai&#39;s Blog</title>
+  <title>Java基础知识 | Caicai&#39;s Blog</title>
   
   
   <meta name="description" content="生活太苦，吃颗糖吧。">
@@ -48,7 +48,7 @@
   
   
   <div class="cover-wrapper">
-    <cover class='cover page half'>
+    <cover class='cover post half'>
       
         
   <h1 class='title'>C a i c a i J S</h1>
@@ -113,7 +113,7 @@
 
       
     </cover>
-    <header class="l_header no_sidebar pure">
+    <header class="l_header pure">
   <div id="loading-bar-wrapper">
     <div id="loading-bar" class="pure"></div>
   </div>
@@ -195,6 +195,8 @@
 			<a class="logo flat-box"></a>
 			<ul class='switcher h-list'>
 				<li class='s-comment'><a class="flat-btn fas fa-comments fa-fw" href='javascript:void(0)' target="_blank" rel="noopener"></a></li>
+        
+          <li class='s-toc'><a class="flat-btn fas fa-list fa-fw" href='javascript:void(0)' target="_blank" rel="noopener"></a></li>
         
 			</ul>
 		</div>
@@ -291,10 +293,10 @@
 
   <div class="l_body">
     <div class='body-wrapper'>
-      <div class='l_main no_sidebar'>
+      <div class='l_main'>
   
 
-  <article id="page" class="post white-box article-type-page" itemscope itemprop="blogPost">
+  <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
     
 
 
@@ -306,8 +308,8 @@
         
   
     <h1 class="title">
-      <a href="/about/index.html">
-        关于小站
+      <a href="/2019/11/16/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+        Java基础知识
       </a>
     </h1>
   
@@ -338,7 +340,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2019-11-15</p>
+    <p>2019-11-16</p>
   </a>
 </div>
 
@@ -346,6 +348,14 @@
         
           
             
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/Java%E5%9F%BA%E7%A1%80/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>Java基础</p>
+    </a>
+  </div>
+
 
           
         
@@ -382,12 +392,188 @@
 
     <section class="article typo">
       <div class="article-entry" itemprop="articleBody">
-        <h2 id="关于博主"><a href="#关于博主" class="headerlink" title="关于博主"></a>关于博主</h2><p><strong>昵称：</strong>菜菜<br><strong>简介：</strong>菜逼程序员<br><strong>兴趣：</strong>篮球、动漫、阅读、观影<br><strong>球星：</strong>阿伦·艾弗森<br><strong>明星：</strong>周星驰<br><strong>动漫：</strong>《名侦探柯南》<br><strong>影视：</strong>《国产凌凌漆》、《武林外传》<br><strong>书籍：</strong>《杀死一只知更鸟》、《白夜行》</p>
-<h2 id="关于博客"><a href="#关于博客" class="headerlink" title="关于博客"></a>关于博客</h2><p><strong>技术分享、人生感悟、生活记录、空间释放。</strong></p>
-<p>​                                                                    —— End ——</p>
+        <h1 id="浅拷贝和深拷贝"><a href="#浅拷贝和深拷贝" class="headerlink" title="浅拷贝和深拷贝"></a><strong>浅拷贝和深拷贝</strong></h1><p>什么是拷贝？就是复制，创建副本。假设有对象A，A有属性t1，t2，t3。那么，我通过拷贝A，得到B，B应该也有属性t1，t2，t3，且A、B两个对象的每个属性，都应该是相同的。对于<strong>基本类型</strong>的属性t1，拷贝是没有疑义的。简单将值复制一份，就达到了拷贝的效果。而对于<strong>引用类型</strong>的属性t2来说，拷贝就有了两层含义：</p>
+<ul>
+<li>第一层是，我只是将t2引用的地址复制一份给B的t2，确实达到了属性相同的效果，可以理解为实现了拷贝，但是事实上，两个对象中的属性t2对应的是同一个对象。在B对象上对t2所指向的对象进行操作，就会影响到A对象中的t2的值。</li>
+<li>第二层是，我将A的t2所指向的对象，假设为o1，完整复制一份，假设为o2，将新的o2的地址给B的t2。也达到了复制的效果，且对B的t2所指向的o2进行操作，不会影响到A的t2所指向的o1。</li>
+</ul>
+<p>拷贝的两层含义，对应了<strong>浅拷贝</strong>和<strong>深拷贝</strong>的概念，做了第一层，就是浅拷贝，做到第二层，就是深拷贝。</p>
+<p>基于以上内容，很容易可以想到，浅拷贝比深拷贝要更快，但是，从拷贝的意义上来看，浅拷贝相较于深拷贝，要欠缺一点。</p>
+<p>事实上，一个对象的某个属性，常常是另一个对象，而另一个对象中的属性又是第三个对象……对象的依赖关系可能会形成一张相当复杂的图。所以，深拷贝，有时候确实是一件相当复杂的事情。</p>
+<p>补充一个题外话，实际使用中，常常采用序列化和反序列化的方式来进行深拷贝的实现，当然，这要求要拷贝的对象及其依赖链路上的所有对象，都实现了序列化接口。这部分内容，我们在以后的文章中会提到。</p>
+<p><img src="http://pics7.baidu.com/feed/902397dda144ad343c29a99b186e29f130ad856d.jpeg?token=cc3fbf1a58349da440fe97c5a59acc91&s=EDA03C7255627F1B4A6598C20000E0B3" alt="img">浅拷贝和深拷贝</p>
+<h2 id="Arrays-copyOf"><a href="#Arrays-copyOf" class="headerlink" title="Arrays.copyOf"></a><strong>Arrays.copyOf</strong></h2><p>ArrayList的集合参数构造函数中，先调用了集合的toArray方法，再采用Arrays.copyOf方法，达到将集合中原来的元素复制到新的ArrayList中的目的。</p>
+<p>先看toArray方法，它是Collection接口规定的一个集合类型对象必须实现的方法，具体实现方式由子类来决定。那么，我们就先假定传入的参数也是一个ArrayList类，去看看ArrayList类的toArray实现。</p>
+<p>找到ArrayList中的toArray方法，我们发现，它内部，也是调用了一个copyOf方法。我们只关注在构造函数中使用了的无参的toArray方法。</p>
+<p>那么，接下来我们就去看看Arrays中的copyOf方法。</p>
+<p>我们发现，Arrays中的copyOf方法，核心操作是生成一个新的数组，再通过System.arraycopy方法，将旧数组中的元素拷贝到新数组中。而System.arraycopy方法，是一个自然方法。</p>
+<p>那么，到此，我们就有了一个疑问，System.arraycopy是一个浅拷贝还是深拷贝呢？我们有必要弄清楚这个问题，它可以帮助我们更清晰的看懂，通过有参构造生成的新的ArrayList和原ArrayList之间的关系。看如下代码：</p>
+<p><img src="http://pics7.baidu.com/feed/0b55b319ebc4b745105a3ed806303b1288821507.png?token=9bca8018c561d5b9b4994a74503b3dfc&s=1EAA7423D1726C230AF5A5DB030080B0" alt="img"></p>
+<p>得到结果：</p>
+<p><img src="http://pics0.baidu.com/feed/2e2eb9389b504fc2160c53f02211c21492ef6dc2.jpeg?token=01599b71dc0b766253e75e75ae9c15a3&s=A578E0328178582108CDDDDE0000C0B2" alt="img">相同</p>
+<p>我们发现，得到结果为true，这说明a[0]和b[0]，存储的是内存中同一块区域的地址，<strong>即System.arraycopy是浅拷贝</strong>。为排除缓存池，自动装箱等的邮箱，我们用一个自定的类再做一次测试。代码如下：</p>
+<p><img src="http://pics7.baidu.com/feed/4d086e061d950a7b969ce40bc31d47dcf0d3c9a2.png?token=4c3fcaf5e13dffabef145f07c40f5adb&s=3EA87023C1744C230A75A0DB0300C0B1" alt="img"></p>
+<p>结果同样为true：</p>
+<p><img src="http://pics1.baidu.com/feed/11385343fbf2b21103ce58920d4c403d0ed78e58.jpeg?token=4baa02ee969ff4e388678f03cd3db840&s=A578E0328178582108CDDDDE0000C0B2" alt="img">相同</p>
+<p>由此，我们得到结论，<strong>即System.arraycopy是浅拷贝，那么，Arrays.copy也是浅拷贝</strong>，我们推断，通过有参构造函数，将一个ArrayList传入，得到一个新的ArrayList，新旧两个ArrayList中的同一元素指向的实质是内存中的同一个对象，用如下代码验证：</p>
+<p><img src="http://pics6.baidu.com/feed/2cf5e0fe9925bc31caa921a59413a8b4ca13706c.png?token=a8010ec501a34f7d2f074f7a467e005e&s=3EAA702389A46C0358F501DB030080B0" alt="img"></p>
+<p>得到结果为true：</p>
+<p><img src="http://pics1.baidu.com/feed/11385343fbf2b21103ce58920d4c403d0ed78e58.jpeg?token=4baa02ee969ff4e388678f03cd3db840&s=A578E0328178582108CDDDDE0000C0B2" alt="img">相同</p>
+<p>所以，ArrayList的有参类型的构造函数，实质是生成了一个原集合的浅拷贝。</p>
+<p><strong>addAll</strong></p>
+<p>LinkedList中，以集合为参数的构造方法，实际调用的是addAll方法。通过观察源码我们发现，addAll方法的核心操作，是先通过toArray方法，将集合中的元素转换成数组，再通过一个循环，把数组中每个元素包装成Node，将通过next和pre组合起来，形成一个LinkedList。</p>
+<p>我们也假设，传入的集合就是一个LinkedList，先关注一个LinedList的toArray方法实现。我们发现，其核心操作是，通过循环，将LinkedList中每个元素的item取出，塞到一个新建的Ojbect[]数组中。</p>
+<p>注意，这里的操作是将item用“=”号，放到数组中，如果，其实Ojbect[]最终得到的还是一系列对象的内存地址（假设是引用对象），所以，事实上，LinkedList的以集合为参数的构造方法，做得也是浅拷贝。</p>
+<p>用如下代码验证：</p>
+<p><img src="http://pics5.baidu.com/feed/c995d143ad4bd113bfc2b3789163810a4afb05ba.png?token=e669d6ac2c485bd436d8cb0a9bd814af&s=1AAA74238D246C03585D01DB0300C0B0" alt="img"></p>
+<p>结果：</p>
+<p><img src="http://pics1.baidu.com/feed/11385343fbf2b21103ce58920d4c403d0ed78e58.jpeg?token=4baa02ee969ff4e388678f03cd3db840&s=A578E0328178582108CDDDDE0000C0B2" alt="img">相同（不用看了，就是同一张图）</p>
+<p>那么，有没有什么方案可以实现List的深拷贝呢？我们以后会介绍到，大家也可以自行百度学习。</p>
+<p><strong>两个问题</strong></p>
+<p>哪里不同？</p>
+<p>都是浅拷贝，但实现方式不同。ArrayList基于System.arraycopy，LinkedList主要依靠自己的循环遍历。</p>
+<p>为何不同？</p>
+<p>很简单，造成ArrayList和LinkedList各种差异的原因，最终都是由于其底层数据结构不同造成的，前者是数组，后者是链表。</p>
+<h1 id="Java创建对象的四种方式"><a href="#Java创建对象的四种方式" class="headerlink" title="Java创建对象的四种方式"></a>Java创建对象的四种方式</h1><p><a href="https://www.cnblogs.com/yunche/p/9530927.html" target="_blank" rel="noopener">https://www.cnblogs.com/yunche/p/9530927.html</a></p>
+<h1 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h1><p><a href="https://blog.csdn.net/u012062455/article/details/79107957" target="_blank" rel="noopener">https://blog.csdn.net/u012062455/article/details/79107957</a></p>
+<h1 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h1><p><a href="https://www.cnblogs.com/sbj-dawn/p/11116673.html" target="_blank" rel="noopener">https://www.cnblogs.com/sbj-dawn/p/11116673.html</a></p>
+<h1 id="字节字符流"><a href="#字节字符流" class="headerlink" title="字节字符流"></a>字节字符流</h1><p><a href="https://blog.csdn.net/qq_33642117/article/details/52074796" target="_blank" rel="noopener">https://blog.csdn.net/qq_33642117/article/details/52074796</a></p>
+<h1 id="类加载过程"><a href="#类加载过程" class="headerlink" title="类加载过程"></a>类加载过程</h1><p><a href="https://www.cnblogs.com/javaee6/p/3714716.html" target="_blank" rel="noopener">https://www.cnblogs.com/javaee6/p/3714716.html</a></p>
+<p><a href="https://www.cnblogs.com/chanshuyi/p/the_java_class_load_mechamism.html" target="_blank" rel="noopener">https://www.cnblogs.com/chanshuyi/p/the_java_class_load_mechamism.html</a></p>
+<h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><p><a href="https://www.cnblogs.com/Qian123/p/5715402.html" target="_blank" rel="noopener">https://www.cnblogs.com/Qian123/p/5715402.html</a></p>
+<p><a href="https://blog.csdn.net/hguisu/article/details/6155636" target="_blank" rel="noopener">https://blog.csdn.net/hguisu/article/details/6155636</a></p>
+<h1 id="序列化和反序列化"><a href="#序列化和反序列化" class="headerlink" title="序列化和反序列化"></a>序列化和反序列化</h1><p><a href="https://tech.meituan.com/2015/02/26/serialization-vs-deserialization.html" target="_blank" rel="noopener">https://tech.meituan.com/2015/02/26/serialization-vs-deserialization.html</a></p>
+<h1 id="重新认识HashMap"><a href="#重新认识HashMap" class="headerlink" title="重新认识HashMap"></a>重新认识HashMap</h1><p><a href="https://tech.meituan.com/2016/06/24/java-hashmap.html" target="_blank" rel="noopener">https://tech.meituan.com/2016/06/24/java-hashmap.html</a></p>
+<h1 id="Spring-MVC注解故障追踪记"><a href="#Spring-MVC注解故障追踪记" class="headerlink" title="Spring MVC注解故障追踪记"></a>Spring MVC注解故障追踪记</h1><p><a href="https://tech.meituan.com/2016/09/30/mt-trip-springmvc-service-annotation-problem-research.html" target="_blank" rel="noopener">https://tech.meituan.com/2016/09/30/mt-trip-springmvc-service-annotation-problem-research.html</a></p>
+<h1 id="红黑树深入剖析及Java实现"><a href="#红黑树深入剖析及Java实现" class="headerlink" title="红黑树深入剖析及Java实现"></a>红黑树深入剖析及Java实现</h1><p><a href="https://tech.meituan.com/2016/12/02/redblack-tree.html" target="_blank" rel="noopener">https://tech.meituan.com/2016/12/02/redblack-tree.html</a></p>
+<h1 id="JavaNIO浅析"><a href="#JavaNIO浅析" class="headerlink" title="JavaNIO浅析"></a>JavaNIO浅析</h1><p><a href="https://tech.meituan.com/2016/11/04/nio.html" target="_blank" rel="noopener">https://tech.meituan.com/2016/11/04/nio.html</a></p>
+<h1 id="缓存那些事"><a href="#缓存那些事" class="headerlink" title="缓存那些事"></a>缓存那些事</h1><p><a href="https://tech.meituan.com/2017/03/17/cache-about.html" target="_blank" rel="noopener">https://tech.meituan.com/2017/03/17/cache-about.html</a></p>
+<h1 id="聊聊MyBatis缓存机制"><a href="#聊聊MyBatis缓存机制" class="headerlink" title="聊聊MyBatis缓存机制"></a>聊聊MyBatis缓存机制</h1><p><a href="https://tech.meituan.com/2018/01/19/mybatis-cache.html" target="_blank" rel="noopener">https://tech.meituan.com/2018/01/19/mybatis-cache.html</a></p>
+<h1 id="Redis高负载下的中断优化"><a href="#Redis高负载下的中断优化" class="headerlink" title="Redis高负载下的中断优化"></a>Redis高负载下的中断优化</h1><p><a href="https://tech.meituan.com/2018/03/16/redis-high-concurrency-optimization.html" target="_blank" rel="noopener">https://tech.meituan.com/2018/03/16/redis-high-concurrency-optimization.html</a></p>
+<h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h1><p> <a href="https://blog.csdn.net/justloveyou_/article/details/78303617" target="_blank" rel="noopener">https://blog.csdn.net/justloveyou_/article/details/78303617</a> </p>
+<h1 id="Tomcat和Jetty"><a href="#Tomcat和Jetty" class="headerlink" title="Tomcat和Jetty"></a>Tomcat和Jetty</h1><p><a href="https://www.ibm.com/developerworks/cn/java/j-lo-jetty/index.html" target="_blank" rel="noopener">https://www.ibm.com/developerworks/cn/java/j-lo-jetty/index.html</a></p>
+<p>Tomcat 和 Jetty 都是作为一个 Servlet 引擎应用的比较广泛，可以将它们比作为中国与美国的关系，虽然 Jetty 正常成长为一个优秀的 Servlet 引擎，但是目前的 Tomcat 的地位仍然难以撼动。相比较来看，它们都有各自的优点与缺点。</p>
+<p>1.架构比较：<strong>相对于Tomcat而言，Jetty更轻量级。Jetty 的架构从前面的分析可知，它的所有组件都是基于 Handler 来实现</strong>，当然它也支持 JMX。但是主要的功能扩展都可以用 Handler 来实现。可以说 Jetty 是面向 Handler 的架构，就像 Spring 是面向 Bean 的架构，iBATIS 是面向 statement 一样，<strong>而 Tomcat 是以多级容器构建起来的</strong>，它们的架构设计必然都有一个“元神”，所有以这个“元神“构建的其它组件都是肉身。</p>
+<p>2.性能比较：<strong>Tomcat 在处理少数非常繁忙的连接上更有优势，也就是说连接的生命周期如果短的话，Tomcat 的总体性能更高。而 Jetty 刚好相反，Jetty 可以同时处理大量连接而且可以长时间保持这些连接。例如像一些 web 聊天应用非常适合用 Jetty 做服务器，像淘宝的 web 旺旺就是用 Jetty 作为 Servlet 引擎。</strong></p>
+<p>3.特性比较：作为一个标准的 Servlet 引擎，它们都支持标准的 Servlet 规范，还有 Java EE 的规范也都支持，由于 Tomcat 的使用的更加广泛，它对这些支持的更加全面一些，有很多特性 Tomcat 都直接集成进来了。但是 Jetty 的应变更加快速，这一方面是因为 Jetty 的开发社区更加活跃，另一方面也是因为 Jetty 的修改更加简单，它只要把相应的组件替换就好了，而 Tomcat 的整体结构上要复杂很多，修改功能比较缓慢。所以 Tomcat 对最新的 Servlet 规范的支持总是要比人们预期的要晚。</p>
+<p>4、<strong>Jetty默认采用NIO结束在处理I/O请求上更占优势，在处理静态资源时，性能较高Tomcat默认采用BIO处理I/O请求，在处理静态资源时，性能较差。</strong></p>
+<h1 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h1><p><a href="https://blog.csdn.net/hguisu/article/details/6155636" target="_blank" rel="noopener">https://blog.csdn.net/hguisu/article/details/6155636</a></p>
+<p><a href="https://blog.csdn.net/C_Xiang_Falcon/article/details/100917145" target="_blank" rel="noopener">https://blog.csdn.net/C_Xiang_Falcon/article/details/100917145</a></p>
+<p>Kafka文件存储机制的那些事：<a href="https://tech.meituan.com/2015/01/13/kafka-fs-design-theory.html" target="_blank" rel="noopener">https://tech.meituan.com/2015/01/13/kafka-fs-design-theory.html</a></p>
+<p>消息队列设计精要：<a href="https://tech.meituan.com/2016/07/01/mq-design.html" target="_blank" rel="noopener">https://tech.meituan.com/2016/07/01/mq-design.html</a></p>
 
       </div>
       
+        <br>
+        
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-11-16T15:55:13+08:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>updated at Nov 16, 2019</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>Java基础</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://caicaijs.github.io/2019/11/16/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/&title=Java基础知识 | Caicai's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://caicaijs.github.io/2019/11/16/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/&title=Java基础知识 | Caicai's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer noopener" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADKklEQVR42u3aQW7DMAwEwPz/0+m1RWFnSdpAJI9PQeraGvXALqnXK77ev67f3/z/fP6E/HeT7/+v6uILGxsbexH2+/Q6uudocee88ydX15m85fD52NjY2Nux85KTF7bk/mT78hJYKIfY2NjYD2b3wkP+tMl6sLGxsbGroeKqItQrjXn5xMbGxn4CO2kq5UWr11T60AZqta4u6KVhY2Njfz07n4p+/+db5tvY2NjYX8x+F69egMkjyvn9+U8/KLCxsbE3YucFoBdUrnpCtb0VDZixsbGxN2JXh7LVozzV4jdpbDUjCjY2Nvbi7N5ItVdgkjgxaWzlm4iNjY29E3sy7s3b95OyNxnZFsoYNjY29rLs6tKTspSEkPmRmtEwAxsbG3sLdg+cFIlqQz/f1mpcuezvjI2Njb0UOw8MVfx8KNt7+59vsLGxsbdjVyNHLzDMScmqCscusbGxsTdlTyYMeXG6dpSb54vDAoaNjY29LPuqslGl5q38/J5ysMHGxsbejn1V46Y6eJiEjWq3/3Dci42Njb0Ru9f0Txo6eQPr9hCCjY2NvSk7iQe9+HHHkZ3qPdjY2NhPYPcKUt4MyuNNtbj2Dh5hY2NjP4ddbetUl5W3inoR5cPBHWxsbOzF2UnAmMSSasjpXefDY2xsbOy92YUDLhcNWXtjgB4vb4FhY2Nj78HOX9xbUJV0e1MJGxsbezt27x/6SdGqDhLuCELY2NjY+7Hzdk+CLLR1ikWxV2ixsbGxd2VXj9dMSlRSnJIQ0gs/r17lxMbGxl6KnY91e62cSRTpbdbhRmNjY2Nvx85bNpMy1hsAJ6GoOpbGxsbG3pvdK2/VElgNIb0w86GphI2Njb0dO4kNvf/nq9ElL4fJhY2Njb0r+128klfOy0x1I5LvCxNsbGxs7KXYo7o3GBJPDuVMSmN5C7CxsbEXYfeK1iSWVFv51RFCc76NjY2NvTh73gbKI8T5BvWCSrKt2NjY2Nh5I+mOQz/5RkRlDBsbG/vB7Ly1NA8S86iDjY2N/Rx2dXGTIlQNKvmRoFvGA9jY2Nhfz+41ZZLXVItcbzDcCz/Y2NjYW7B/ABWmm6dcke7AAAAAAElFTkSuQmCC' target="_blank">
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+        
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://caicaijs.github.io/2019/11/16/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/&title=Java基础知识 | Caicai's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+      
+      
+          <div class="prev-next">
+              
+              
+                  <section class="next">
+                      <span class="art-item-right" aria-hidden="true">
+                          <h6>Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                          <h4>
+                              <a href="/2019/11/16/Java-API/" rel="prev" title="Java API">
+                                  
+                                      Java API
+                                  
+                              </a>
+                          </h4>
+                          
+                              
+                              <h6 class="tags">
+                                  <a class="tag" href="/tags/Java%E5%B8%B8%E7%94%A8API/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> Java常用API</a>
+                              </h6>
+                          
+                      </span>
+                  </section>
+              
+          </div>
       
       
         <div style="margin-top:10px;">
@@ -395,7 +581,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-keyboard-o"></i>
       <span class="post-meta-item-text">  字数统计: </span>
-      <span class="post-count">88字</span>
+      <span class="post-count">2.3k字</span>
     </span>
   </span>
 
@@ -404,7 +590,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-hourglass-half"></i>
       <span class="post-meta-item-text">  阅读时长: </span>
-      <span class="post-count">1分</span>
+      <span class="post-count">8分</span>
     </span>
   </span>
 </div>
@@ -443,6 +629,13 @@
 <!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
 
 
+
+  <script>
+    window.subData = {
+      title: 'Java基础知识',
+      tools: true
+    }
+  </script>
 
 
 </div>
@@ -531,6 +724,20 @@
           
             
               
+  <section class='widget toc-wrapper'>
+    
+<header class='pure'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;TOC</div>
+  
+    <!-- <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer noopener" href="javascript:void(0)" target="_blank"><i class="fas fa-thumbtack fa-fw"></i></a></div> -->
+  
+</header>
+
+    <div class='content pure'>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#浅拷贝和深拷贝"><span class="toc-text">浅拷贝和深拷贝</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Arrays-copyOf"><span class="toc-text">Arrays.copyOf</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java创建对象的四种方式"><span class="toc-text">Java创建对象的四种方式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#包装类"><span class="toc-text">包装类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#缓存"><span class="toc-text">缓存</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#字节字符流"><span class="toc-text">字节字符流</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#类加载过程"><span class="toc-text">类加载过程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#异常"><span class="toc-text">异常</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#序列化和反序列化"><span class="toc-text">序列化和反序列化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#重新认识HashMap"><span class="toc-text">重新认识HashMap</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Spring-MVC注解故障追踪记"><span class="toc-text">Spring MVC注解故障追踪记</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#红黑树深入剖析及Java实现"><span class="toc-text">红黑树深入剖析及Java实现</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaNIO浅析"><span class="toc-text">JavaNIO浅析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#缓存那些事"><span class="toc-text">缓存那些事</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#聊聊MyBatis缓存机制"><span class="toc-text">聊聊MyBatis缓存机制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Redis高负载下的中断优化"><span class="toc-text">Redis高负载下的中断优化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#计算机网络"><span class="toc-text">计算机网络</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Tomcat和Jetty"><span class="toc-text">Tomcat和Jetty</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Kafka"><span class="toc-text">Kafka</span></a></li></ol>
+    </div>
+  </section>
+
 
             
           
@@ -1061,7 +1268,7 @@
     
     appId: "OWgqsgcUcUMvEgM8887KxyAr-gzGzoHsz",
     appKey: "kIdSp6cV6FnndEVpleIECjst",
-    placeholder: "有什么想对我说的呢？",
+    placeholder: "快来评论吧~",
     pageSize:'10',
     avatar:'mp',
     lang:'zh-cn',

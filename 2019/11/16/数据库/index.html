@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>数据库 | Caicai&#39;s Blog</title>
+  
+  
+  <meta name="description" content="生活太苦，吃颗糖吧。">
+  
+
+  
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.10.1/css/all.min.css">
+  
+
+  
+  <link rel="shortcut icon" type='image/x-icon' href="/image/favicon_package_v0.16/favicon.ico">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.10.22/css/style.css">
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+  
+  
+  <div class="cover-wrapper">
+    <cover class='cover post half'>
+      
+        
+  <h1 class='title'>C a i c a i J S</h1>
+
+
+  <div class="m_search">
+    <form name="searchform" class="form u-search-form">
+      <input type="text" class="input u-search-input" placeholder="" />
+      <i class="icon fas fa-search fa-fw"></i>
+    </form>
+  </div>
+
+<div class='menu navgation'>
+  <ul class='h-list'>
+    
+      
+        <li>
+          <a class="nav home" href="/"
+            
+            
+            id="home">
+            <i class='fas fa-rss fa-fw'></i>&nbsp;主页
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/categories/"
+            
+              rel="nofollow"
+            
+            
+            id="categories">
+            <i class='fas fa-folder-open fa-fw'></i>&nbsp;分类
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/tags/"
+            
+              rel="nofollow"
+            
+            
+            id="tags">
+            <i class='fas fa-hashtag fa-fw'></i>&nbsp;标签
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/archives/"
+            
+              rel="nofollow"
+            
+            
+            id="archives">
+            <i class='fas fa-archive fa-fw'></i>&nbsp;归档
+          </a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+      
+    </cover>
+    <header class="l_header pure">
+  <div id="loading-bar-wrapper">
+    <div id="loading-bar" class="pure"></div>
+  </div>
+
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href='/' >
+        
+          Caicai's Blog
+        
+      </a>
+			<div class='menu navgation'>
+				<ul class='h-list'>
+          
+  					
+  						<li>
+								<a class="nav flat-box" href="/"
+                  
+                  
+                  id="home">
+									<i class='fas fa-grin fa-fw'></i>&nbsp;主页
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/categories/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="categories">
+									<i class='fas fa-folder-open fa-fw'></i>&nbsp;分类
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/tags/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="tags">
+									<i class='fas fa-hashtag fa-fw'></i>&nbsp;标签
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/archives/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="archives">
+									<i class='fas fa-archive fa-fw'></i>&nbsp;归档
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="Search" />
+						<i class="icon fas fa-search fa-fw"></i>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a class="fas fa-search fa-fw" href='javascript:void(0)' target="_blank" rel="noopener"></a></li>
+				
+				<li class='s-menu'><a class="fas fa-bars fa-fw" href='javascript:void(0)' target="_blank" rel="noopener"></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo flat-box"></a>
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a class="flat-btn fas fa-comments fa-fw" href='javascript:void(0)' target="_blank" rel="noopener"></a></li>
+        
+          <li class='s-toc'><a class="flat-btn fas fa-list fa-fw" href='javascript:void(0)' target="_blank" rel="noopener"></a></li>
+        
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu navgation">
+      <ul>
+        
+          
+            <li>
+							<a class="nav flat-box" href="/"
+                
+                
+                id="home">
+								<i class='fas fa-clock fa-fw'></i>&nbsp;近期文章
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/categories/"
+                
+                  rel="nofollow"
+                
+                
+                id="categories">
+								<i class='fas fa-folder-open fa-fw'></i>&nbsp;文章分类
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/tags/"
+                
+                  rel="nofollow"
+                
+                
+                id="tags">
+								<i class='fas fa-hashtag fa-fw'></i>&nbsp;文章标签
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/archives/"
+                
+                  rel="nofollow"
+                
+                
+                id="archives">
+								<i class='fas fa-archive fa-fw'></i>&nbsp;文章归档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="https://github.com/caicaijs"
+                
+                
+                id="https:github.comcaicaijs">
+								<i class='fas fa-code-branch fa-fw'></i>&nbsp;开源项目
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="https://xaoxuu.com/wiki/material-x/"
+                
+                  rel="nofollow"
+                
+                
+                id="https:xaoxuu.comwikimaterial-x">
+								<i class='fas fa-book fa-fw'></i>&nbsp;主题文档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/about/"
+                
+                  rel="nofollow"
+                
+                
+                id="about">
+								<i class='fas fa-info-circle fa-fw'></i>&nbsp;关于小站
+							</a>
+            </li>
+          
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+<script>setLoadingBarProgress(40);</script>
+
+  </div>
+
+
+  <div class="l_body">
+    <div class='body-wrapper'>
+      <div class='l_main'>
+  
+
+  <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+    
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="/2019/11/16/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+        数据库
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    
+      <a href="https://caicaijs.github.io" rel="nofollow">
+        
+          <i class="fas fa-user" aria-hidden="true"></i>
+        
+        <p>Caicai</p>
+      </a>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-11-16</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/MySQL/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>MySQL</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  
+    <div class="new-meta-item browse busuanzi">
+      <a class='notlink'>
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <p>
+          <span id="busuanzi_value_page_pv">
+            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+          </span>
+        </p>
+      </a>
+    </div>
+  
+
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+    <section class="article typo">
+      <div class="article-entry" itemprop="articleBody">
+        <p>总结：<a href="https://blog.csdn.net/Jack__Frost/article/details/73347688" target="_blank" rel="noopener">https://blog.csdn.net/Jack__Frost/article/details/73347688</a></p>
+<p>面试题：<a href="https://blog.csdn.net/justloveyou_/article/details/78308460" target="_blank" rel="noopener">https://blog.csdn.net/justloveyou_/article/details/78308460</a></p>
+<h1 id="一、基础知识单元"><a href="#一、基础知识单元" class="headerlink" title="一、基础知识单元"></a><em>一、基础知识单元</em></h1><h1 id="一条SQL语句在MySQL中如何执行的？"><a href="#一条SQL语句在MySQL中如何执行的？" class="headerlink" title="一条SQL语句在MySQL中如何执行的？"></a>一条SQL语句在MySQL中如何执行的？</h1><p><a href="https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&amp;mid=2247485097&amp;idx=1&amp;sn=84c89da477b1338bdf3e9fcd65514ac1&amp;chksm=cea24962f9d5c074d8d3ff1ab04ee8f0d6486e3d015cfd783503685986485c11738ccb542ba7&amp;mpshare=1&amp;scene=1&amp;srcid=1003wfcm0X7pPu3QUFm14Xzl&amp;sharer_sharetime=1570116502421&amp;sharer_shareid=90eff45e88473d747c7f8ab4a9805668&amp;key=09b6cb852691fba24eaf4b95a7d309fa69db5da62e142b94dd97acfa0db5d4c1154962f266a1f4f1899960e6c3f5d2e413de4e16bb9c13f95f9a096930ff1ab51e0caf04afaadeead9eb9fa6e5a53d8b&amp;ascene=1&amp;uin=MjAyOTU5NDUyNw%3D%3D&amp;devicetype=Windows+10&amp;version=62060833&amp;lang=zh_CN&amp;pass_ticket=vMwvVDnWPNHzaiJboYWiCKxiqiAV2RTkrLtWBbRJo5g%2BxZPHfxEWXdDsDev8x427" target="_blank" rel="noopener">https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&amp;mid=2247485097&amp;idx=1&amp;sn=84c89da477b1338bdf3e9fcd65514ac1&amp;chksm=cea24962f9d5c074d8d3ff1ab04ee8f0d6486e3d015cfd783503685986485c11738ccb542ba7&amp;mpshare=1&amp;scene=1&amp;srcid=1003wfcm0X7pPu3QUFm14Xzl&amp;sharer_sharetime=1570116502421&amp;sharer_shareid=90eff45e88473d747c7f8ab4a9805668&amp;key=09b6cb852691fba24eaf4b95a7d309fa69db5da62e142b94dd97acfa0db5d4c1154962f266a1f4f1899960e6c3f5d2e413de4e16bb9c13f95f9a096930ff1ab51e0caf04afaadeead9eb9fa6e5a53d8b&amp;ascene=1&amp;uin=MjAyOTU5NDUyNw%3D%3D&amp;devicetype=Windows+10&amp;version=62060833&amp;lang=zh_CN&amp;pass_ticket=vMwvVDnWPNHzaiJboYWiCKxiqiAV2RTkrLtWBbRJo5g%2BxZPHfxEWXdDsDev8x427</a></p>
+<h1 id="SQL执行顺序"><a href="#SQL执行顺序" class="headerlink" title="SQL执行顺序"></a><strong>SQL执行顺序</strong></h1><blockquote>
+<p>以下的每一步操作都会生成一个虚拟表，作为下一个处理的输入，在这个过程中，这些虚拟表对于用户都是透明的，只用最后一步执行完的虚拟表返回给用户，在处理过程中，没有的步骤会直接跳过。</p>
+</blockquote>
+<p>以下为逻辑上的执行顺序：</p>
+<p><img src="https://pic3.zhimg.com/80/v2-584301437377f62c8e2920a241f680a2_hd.jpg" alt="img"></p>
+<p>(1) from：对左表left-table和右表right-table执行笛卡尔积(a*b)，形成虚拟表VT1;</p>
+<p>(2) on: 对虚拟表VT1进行on条件进行筛选，只有符合条件的记录才会插入到虚拟表VT2中;</p>
+<p>(3) join: 指定out join会将未匹配行添加到VT2产生VT3,若有多张表，则会重复(1)~(3);</p>
+<p>(4) where: 对VT3进行条件过滤，形成VT4, where条件是从左向右执行的;</p>
+<p>(5) group by: 对VT4进行分组操作得到VT5;</p>
+<p>(6) cube | rollup: 对VT5进行cube | rollup操作得到VT6;</p>
+<p>(7) having: 对VT6进行过滤得到VT7;</p>
+<p>(8) select: 执行选择操作得到VT8，本人看来VT7和VT8应该是一样的;</p>
+<p>(9) distinct: 对VT8进行去重，得到VT9;</p>
+<p>(10) order by: 对VT9进行排序，得到VT10;</p>
+<p>(11) limit: 对记录进行截取，得到VT11返回给用户。</p>
+<blockquote>
+<p>Note: on条件应用于连表过滤，where应用于on过滤后的结果（有on的话），having应用于分组过滤</p>
+</blockquote>
+<h1 id="二、事务单元"><a href="#二、事务单元" class="headerlink" title="二、事务单元"></a><em>二、事务单元</em></h1><h1 id="什么是事务"><a href="#什么是事务" class="headerlink" title="什么是事务?"></a>什么是事务?</h1><p>事务是逻辑上的一组操作，要么都执行，要么都不执行。 </p>
+<p>事务最经典也经常被拿出来说例子就是转账了。假如小明要给小红转账1000元，这个转账会涉及到两个关键操作就 是：将小明的余额减少1000元，将小红的余额增加1000元。万一在这两个操作之间突然出现错误比如银行系统崩 溃，导致小明余额减少而小红的余额没有增加，这样就不对了。事务就是保证这两个关键操作要么都成功，要么都要失败。 </p>
+<h1 id="事物的特性-ACID"><a href="#事物的特性-ACID" class="headerlink" title="事物的特性(ACID)"></a><strong>事物的特性(ACID)</strong></h1><p><img src="C:%5CUsers%5CRun%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1570190917278.png" alt="1570190917278"></p>
+<p>1、 <strong>原子性：</strong> 事务是最小的执行单位，不允许分割。事务的原子性确保动作要么全部完成，要么完全不起作用； </p>
+<p>2、 <strong>一致性：</strong> 执行事务前后，数据保持一致，多个事务对同一个数据读取的结果是相同的； </p>
+<p>3、<strong>隔离性：</strong> 并发访问数据库时，一个用户的事务不被其他事务所干扰，各并发事务之间数据库是独立的； </p>
+<p>4、<strong>持久性:</strong> 一个事务被提交之后。它对数据库中数据的改变是持久的，即使数据库发生故障也不应该对其有任何影 响。</p>
+<h1 id="并发事务带来的问题"><a href="#并发事务带来的问题" class="headerlink" title="并发事务带来的问题"></a><strong>并发事务带来的问题</strong></h1><p>在典型的应用程序中，多个事务并发运行，经常会操作相同的数据来完成各自的任务（多个用户对统一数据进行操 作）。并发虽然是必须的，但可能会导致以下的问题。 </p>
+<ul>
+<li><p><strong>丢失修改（Lost to modify）:</strong> 指在一个事务读取一个数据时，另外一个事务也访问了该数据，那么在第一个事务中修改了这个数据后，第二个事务也修改了这个数据。这样第一个事务内的修改结果就被丢失，因此称为丢失修改。 例如：事务1读取某表中的数据A=20，事务2也读取A=20，事务1修改A=A-1，事务2也修改A=A-1，最终结果A=19，事务1的修改被丢失。 </p>
+</li>
+<li><p><strong>脏读（Dirty read）:</strong> 当一个事务正在访问数据并且对数据进行了修改，而这种修改还没有提交到数据库中，这时另外一个事务也访问了这个数据，然后使用了这个数据。因为这个数据是还没有提交的数据，那么另外一个事务读到的这个数据是“脏数据”，依据“脏数据”所做的操作可能是不正确的。 </p>
+<blockquote>
+<p>脏数据（Dirty Read）是指源系统中的数据不在给定的范围内或对于实际业务毫无意义，或是数据格式非法，以及在源系统中存在不规范的编码和含糊的业务逻辑。</p>
+</blockquote>
+</li>
+<li><p><strong>不可重复读（Unrepeatableread）:</strong> 指在一个事务内多次读同一数据。在这个事务还没有结束时，另一个事务也访问该数据。那么，在第一个事务中的两次读数据之间，由于第二个事务的修改导致第一个事务两次读取的数据可能不太一样。这就发生了在一个事务内两次读到的数据是不一样的情况，因此称为不可重复读。 </p>
+</li>
+<li><p><strong>幻读（Phantom read）:</strong> 幻读与不可重复读类似。它发生在一个事务（T1）读取了几行数据，接着另一个并发事务（T2）插入了一些数据时。在随后的查询中，第一个事务（T1）就会发现多了一些原本不存在的记录，就好像发生了幻觉一样，所以称为幻读。</p>
+</li>
+</ul>
+<p><strong>不可重复度和幻读区别：</strong> </p>
+<p>不可重复读的重点是修改，幻读的重点在于新增或者删除。 </p>
+<p>例1（同样的条件, 你读取过的数据, 再次读取出来发现值不一样了 ）：事务1中的A先生读取自己的工资为 1000的操还没完成，事务2中的B先生就修改了A的工资为2000，导致A再读自己的工资时工资变为 2000；这就是不可重复读。 </p>
+<p>例2（同样的条件, 第1次和第2次读出来的记录数不一样 ）：假设某工资单表中工资大于3000的有4人，事务1读取了所有工资大于3000的人，共查到4条记录，这时事务2又插入了一条工资大于3000的记录，事务1再次读取时查到的记录就变为了5条，这样就导致了幻读。 </p>
+<h1 id="事务隔离级别"><a href="#事务隔离级别" class="headerlink" title="事务隔离级别"></a><strong>事务隔离级别</strong></h1><p><strong>SQL</strong> <strong>标准定义了四个隔离级别：</strong> </p>
+<ul>
+<li><strong>READ-UNCOMMITTED(读取未提交)：</strong> 最低的隔离级别，允许读取尚未提交的数据变更，<strong>可能会导致脏读、幻读或不可重复读</strong> </li>
+<li><strong>READ-COMMITTED(读取已提交):</strong> 允许读取并发事务已经提交的数据，<strong>可以阻止脏读，但是幻读或不可重复读仍有可能发生</strong> </li>
+<li><strong>REPEATABLE-READ（可重复读）:</strong> 对同一字段的多次读取结果都是一致的，除非数据是被本身事务自己所修 改，<strong>可以阻止脏读和不可重复读，但幻读仍有可能发生。</strong> </li>
+<li><strong>SERIALIZABLE(可串行化):</strong> 最高的隔离级别，完全服从ACID的隔离级别。所有的事务依次逐个执行，这样事务之间就完全不可能产生干扰，也就是说，<strong>该级别可以防止脏读、不可重复读以及幻读</strong>。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center">脏读</th>
+<th align="center">不可重复读</th>
+<th align="center">幻读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>read uncommitted</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td>read committed</td>
+<td align="center">×</td>
+<td align="center">√</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td>repeatable read</td>
+<td align="center">×</td>
+<td align="center">×</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td>serializable</td>
+<td align="center">×</td>
+<td align="center">×</td>
+<td align="center">×</td>
+</tr>
+</tbody></table>
+<p>MySQL InnoDB 存储引擎的默认支持的隔离级别是 <strong>REPEATABLE-READ（可重读）</strong>。我</p>
+<p>这里需要注意的是：与 SQL 标准不同的地方在于InnoDB 存储引擎在 <strong>REPEATABLE-READ（可重读）</strong>事务隔离级别 下使用的是Next-Key Lock 锁算法，因此可以避免幻读的产生，这与其他数据库系统(如 SQL Server)是不同的。所以 说InnoDB 存储引擎的默认支持的隔离级别是 <strong>REPEATABLE-READ（可重读）</strong> 已经可以完全保证事务的隔离性要 求，即达到了 SQL标准的<strong>SERIALIZABLE(可串行化)</strong>隔离级别。因为隔离级别越低，事务请求的锁越少，所以大部分数据库系统的隔离级别都是<strong>READ-COMMITTED(读取提交内容):</strong>，但是你要知道的是InnoDB 存储引擎默认使用 <strong>REPEATABLE-READ（可重读）</strong>并不会有任何性能损失。 </p>
+<p>InnoDB 存储引擎在 <strong>分布式事务</strong> 的情况下一般会用到<strong>SERIALIZABLE(可串行化)</strong>隔离级别。</p>
+<h1 id="MySQL通过MVCC-解决读写并发问题-和间隙锁（解决写写并发问题）来解决幻读"><a href="#MySQL通过MVCC-解决读写并发问题-和间隙锁（解决写写并发问题）来解决幻读" class="headerlink" title="MySQL通过MVCC(解决读写并发问题)和间隙锁（解决写写并发问题）来解决幻读"></a>MySQL通过MVCC(解决读写并发问题)和间隙锁（解决写写并发问题）来解决幻读</h1><h2 id="1、MVCC多版本并发控制"><a href="#1、MVCC多版本并发控制" class="headerlink" title="1、MVCC多版本并发控制"></a>1、MVCC多版本并发控制</h2><p> MySQL的大多数事务型存储引擎实现的都不是简单的行级锁。基于提升并发性能的考虑，它们一般都同时实现了多版本并发控制（MVCC）。不仅是MySQL，包括Oracle、PostgreSQL等其他数据库系统也都实现了MVCC，但各自的实现机制不尽相同，因为MVCC没有一个统一的实现标准。</p>
+<pre><code>可以认为MVCC是行级锁的一个变种，但是它在很多情况下避免了加锁操作，因此开销更低。虽然实现机制有所不同，但大都实现了非阻塞的读操作，写操作也只锁定必要的行。
+
+MVCC的实现，是通过保存数据在某个时间点的快照来实现的。也就是说，不管需要执行多长时间，每个事务看到的数据都是一致的。根据事务开始的时间不同，每个事务对同一张表，同一时刻看到的数据可能是不一样的。如果之前没有这方面的概念，这句话听起来就有点迷惑。熟悉了以后会发现，这句话其实还是很容易理解的。
+
+前面说到不同存储引擎的MVCC实现是不同的，典型的有乐观（optimistic）并发控制控制和悲观（pessimistic）并发控制。</code></pre><p><strong>下面我们通过InnoDB的简化版行为来说明MVCC是如何工作的。</strong></p>
+<pre><code>InnoDB的MVCC，是通过在每行记录后面保存两个隐藏的列来实现的。这两个列，一个保存了行的创建时间，一个保存行的过期时间（或删除时间）。当然存储的并不是实际的时间值，而是系统版本号（systemversionnumber）。每开始一个新的事务，系统版本号都会自动递增。事务开始时刻的系统版本号会作为事务的版本号，用来和查询到的每行记录的版本号进行比较。下面看一下在REPEATABLEREAD隔离级别下，MVCC具体是如何操作的。</code></pre><ul>
+<li><p>SELECT    InnoDB会根据以下两个条件检查每行记录：InnoDB只查找版本早于当前事务版本的数据行（也就是，行的系统版本号小于或等于事务的系统版本号），这样可以确保事务读取的行，要么是在事务开始前已经存在的，要么是事务自身插入或者修改过的。行的删除版本要么未定义，要么大于当前事务版本号。这可以确保事务读取到的行，在事务开始之前未被删除。只有符合上述两个条件的记录，才能返回作为查询结果。</p>
+</li>
+<li><p>INSERT    InnoDB为新插入的每一行保存当前系统版本号作为行版本号。</p>
+</li>
+<li><p>DELETE    InnoDB为删除的每一行保存当前系统版本号作为行删除标识。</p>
+</li>
+<li><p>UPDATE   InnoDB为插入一行新记录，保存当前系统版本号作为行版本号，同时保存当前系统版本号到原来的行作为行删除标识。保存这两个额外系统版本号，使大多数读操作都可以不用加锁。这样设计使得读数据操作很简单，性能很好，并且也能保证只会读取到符合标准的行。不足之处是每行记录都需要额外的存储空间，需要做更多的行检查工作，以及一些额外的维护工作。MVCC只在REPEATABLEREAD和READCOMMITTED两个隔离级别下工作。其他两个隔离级别都和MVCC不兼容，因为READUNCOMMITTED总是读取最新的数据行，而不是符合当前事务版本的数据行。而SERIALIZABLE则会对所有读取的行都加锁。</p>
+</li>
+</ul>
+<p><strong>PS：MVCC解决了快照读的幻读问题，但未解决事务的幻读问题想解决可使用间隙锁</strong></p>
+<p>MySQL InnoDB支持三种行锁定方式：<strong>InnoDB的默认加锁方式是next-key 锁。</strong></p>
+<p>l   行锁（Record Lock）:锁直接加在索引记录上面，锁住的是key。</p>
+<p>l   间隙锁（Gap Lock）:锁定索引记录间隙，确保索引记录的间隙不变。间隙锁是针对事务隔离级别为可重复读或以上级别而已的。</p>
+<p>l   Next-Key Lock ：行锁和间隙锁组合起来就叫Next-Key Lock。 </p>
+<p>默认情况下，InnoDB工作在可重复读(Repeatable Read)隔离级别下，并且会以Next-Key Lock的方式对数据行进行加锁，这样可以有效防止幻读的发生。Next-Key Lock是行锁和间隙锁的组合，当InnoDB扫描索引记录的时候，会首先对索引记录加上行锁（Record Lock），再对索引记录两边的间隙加上间隙锁（Gap Lock）。加上间隙锁之后，其他事务就不能在这个间隙修改或者插入记录。 read committed隔离级别下<strong>Gap Lock在InnoDB的唯一作用就是防止其他事务的插入操作，以此防止幻读的发生。</strong></p>
+<p>  <strong>Innodb自动使用间隙锁的条件：（1）必须在Repeatable Read级别下（2）检索条件必须有索引（没有索引的话，mysql会全表扫描，那样会锁定整张表所有的记录，包括不存在的记录，此时其他事务不能修改不能删除不能添加。</strong></p>
+<h1 id="三、锁单元"><a href="#三、锁单元" class="headerlink" title="三、锁单元"></a><em>三、锁单元</em></h1><h1 id="MySQL-的锁机制"><a href="#MySQL-的锁机制" class="headerlink" title="MySQL 的锁机制"></a>MySQL 的锁机制</h1><h2 id="1、InnoDB实现了两种类型的行锁"><a href="#1、InnoDB实现了两种类型的行锁" class="headerlink" title="1、InnoDB实现了两种类型的行锁:"></a>1、InnoDB实现了两种类型的行锁:</h2><p>共享锁（<strong>S</strong>）：允许一个事务去读一行，阻止其他事务获得相同的数据集的排他锁。(我读的时候，你可以读，但是不能写。)</p>
+<p>排他锁（<strong>X</strong>）：允许获得排他锁的事务更新数据，但是阻止其他事务获得相同数据集的共享锁和排他锁。(我写的时候，你不能读也不能写。)</p>
+<h2 id="2、InnoDB还有两个表锁："><a href="#2、InnoDB还有两个表锁：" class="headerlink" title="2、InnoDB还有两个表锁："></a>2、InnoDB还有两个表锁：</h2><p>意向共享锁（<strong>IS</strong>）：表示事务准备给数据行加入共享锁，也就是说一个数据行加共享锁前必须先取得该表的IS锁。(要想加S锁，必须先加IS锁)</p>
+<p>意向排他锁（<strong>IX</strong>）：类似上面，表示事务准备给数据行加入排他锁，说明事务在一个数据行加排他锁前必须先取得该表的IX锁。(要想加X锁，必须先加IX锁)</p>
+<blockquote>
+<p>意向锁是InnoDB自动加的，不需要用户干预。</p>
+</blockquote>
+<p>对于insert、update、delete，InnoDB会自动给涉及的数据加排他锁（X）；对于一般的Select语句，InnoDB不会加任何锁。</p>
+<h2 id="3、事务可以通过以下语句显示加共享锁或排他锁："><a href="#3、事务可以通过以下语句显示加共享锁或排他锁：" class="headerlink" title="3、事务可以通过以下语句显示加共享锁或排他锁："></a>3、事务可以通过以下语句显示加共享锁或排他锁：</h2><p>共享锁：select * from table_name where …..lock in share mode</p>
+<p>排他锁：select * from table_name where …..for update</p>
+<p><img src="https://img-blog.csdn.net/20180322152022600" alt="img"></p>
+<p>利用select ….lock in share mode加入共享锁</p>
+<p><img src="https://img-blog.csdn.net/20180322145720552" alt="img"></p>
+<p>利用select ….for update加入排他锁</p>
+<p><img src="https://img-blog.csdn.net/20180322145738319" alt="img"></p>
+<p>锁的具体实现方式见：<a href="https://www.2cto.com/database/201508/429967.html中间部分" target="_blank" rel="noopener">https://www.2cto.com/database/201508/429967.html中间部分</a></p>
+<h2 id="4、死锁的产生与避免"><a href="#4、死锁的产生与避免" class="headerlink" title="4、死锁的产生与避免"></a><strong>4、死锁的产生与避免</strong></h2><h3 id="4-1死锁"><a href="#4-1死锁" class="headerlink" title="4.1死锁:"></a>4.1死锁:</h3><p>我们说过MyISAM中是不会产生死锁的，因为MyISAM总是一次性获得所需的全部锁，要么全部满足，要么全部等待。</p>
+<p>而在InnoDB中，锁是逐步获得的，就造成了死锁的可能。在上面的例子中我们可以看到，当两个事务都需要获得对方持有的锁才能够继续完成事务，导致双方都在等待，产生死锁。发生死锁后，InnoDB一般都可以检测到，并使一个事务释放锁回退，另一个获取锁完成事务。</p>
+<h3 id="4-2避免死锁"><a href="#4-2避免死锁" class="headerlink" title="4.2避免死锁:"></a>4.2避免死锁:</h3><p>有多种方法可以避免死锁，这里只介绍常见的三种：</p>
+<p>1、如果不同程序会并发存取多个表，尽量约定以相同的顺序访问表，可以大大降低死锁机会。</p>
+<p>2、在同一个事务中，尽可能做到一次锁定所需要的所有资源，减少死锁产生概率；</p>
+<p>3、对于非常容易产生死锁的业务部分，可以尝试使用升级锁定颗粒度，通过表级锁定来减少死锁产生的概率</p>
+<h1 id="四、优化单元"><a href="#四、优化单元" class="headerlink" title="四、优化单元"></a><em>四、优化单元</em></h1><h1 id="大表优化"><a href="#大表优化" class="headerlink" title="大表优化"></a>大表优化</h1><p>当MySQL单表记录数过大时，数据库的CRUD性能会明显下降，一些常见的优化措施如下： </p>
+<p>1、<strong>限定数据的范围：</strong> 务必禁止不带任何限制数据范围条件的查询语句。比如：我们当用户在查询订单历史的时候，我们可以控制在一个月的范围内。； </p>
+<p>2、<strong>读/写分离：</strong> 经典的数据库拆分方案，主库负责写，从库负责读； </p>
+<p>3、<strong>垂直分区： 根据数据库里面数据表的相关性进行拆分。</strong> 例如，用户表中既有用户的登录信息又有用户的基本信息，可以将用户表拆分成两个单独的表，甚至放到单独的库做分库。<strong>简单来说垂直拆分是指数据表列的拆分，</strong> </p>
+<p><strong>把一张列比较多的表拆分为多张表。</strong> 如下图所示，这样来说大家应该就更容易理解了。</p>
+<p><img src="C:%5CUsers%5CRun%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1570192612448.png" alt="1570192612448"></p>
+<p><strong>垂直拆分的优点：</strong> 可以使得行数据变小，在查询时减少读取的Block数，减少I/O次数。此外，垂直分区可以简 化表的结构，易于维护。</p>
+<p><strong>垂直拆分的缺点：</strong> 主键会出现冗余，需要管理冗余列，并会引起Join操作，可以通过 在应用层进行Join来解决。此外，垂直分区会让事务变得更加复杂； </p>
+<p>4、<strong>水平分区： 保持数据表结构不变，通过某种策略存储数据分片。这样每一片数据分散到不同的表或者库中，达到了分布式的目的。 水平拆分可以支撑非常大的数据量。</strong> 水平拆分是指数据表行的拆分，表的行数超过200万行时，就会变慢，这时可以把一张的表的数据拆成多张表来存放。举个例子：我们可以将用户信息表拆分成多个用户信息表，这样就可以避免单一表数据量过大对性能造成影响。 </p>
+<p><img src="C:%5CUsers%5CRun%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1570192704484.png" alt="1570192704484"></p>
+<p>水平拆分可以支持非常大的数据量。需要注意的一点是:分表仅仅是解决了单一表数据过大的问题，但由于表的数据还是在同一台机器上，其实对于提升MySQL并发能力没有什么意义，所以 <strong>水平拆分最好分库</strong> 。水平拆分能够 <strong>支持非常大的数据量存储，应用端改造也少</strong>，但 <strong>分片事务难以解决</strong> ，跨界点Join性能较差，逻辑复杂。《Java工程师修炼之道》的作者推荐 <strong>尽量不要对数据进行分片，因为拆分会带来逻辑、部署、运维的各种复杂度</strong> ，一般的数据表在优化得当的情况下支撑千万以下的数据量是没有太大问题的。如果实在要分片，尽量选择客户端分片架构，这样可以减少一次和中间件的网络I/O。</p>
+<h1 id="MySQL-explain详解"><a href="#MySQL-explain详解" class="headerlink" title="MySQL explain详解"></a>MySQL explain详解</h1><p><a href="https://www.cnblogs.com/tufujie/p/9413852.html" target="_blank" rel="noopener">https://www.cnblogs.com/tufujie/p/9413852.html</a></p>
+<h1 id="MySQL优化"><a href="#MySQL优化" class="headerlink" title="MySQL优化"></a>MySQL优化</h1><p>explain：<a href="https://tech.meituan.com/2014/06/30/mysql-index.html" target="_blank" rel="noopener">https://tech.meituan.com/2014/06/30/mysql-index.html</a></p>
+<p>总结：<a href="https://tech.meituan.com/2018/03/16/redis-high-concurrency-optimization.html" target="_blank" rel="noopener">https://tech.meituan.com/2018/03/16/redis-high-concurrency-optimization.html</a></p>
+
+      </div>
+      
+        <br>
+        
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-11-16T15:45:20+08:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>updated at Nov 16, 2019</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MySQL/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>MySQL</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://caicaijs.github.io/2019/11/16/%E6%95%B0%E6%8D%AE%E5%BA%93/&title=数据库 | Caicai's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://caicaijs.github.io/2019/11/16/%E6%95%B0%E6%8D%AE%E5%BA%93/&title=数据库 | Caicai's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer noopener" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACuklEQVR42u3a0W6jQAwF0Pz/T7evu2oh1/Y4otLhKQIycCYSOHf8esXb1z/b1f77o1fnXx1Nxj+24eHh4Q1uPb/w/f6f51QBV9fK7xkPDw9vm5fcVkKqvjzurzU5Bw8PD+85vPtvJUd7I+Dh4eH9dV61IM6/lYyJh4eH9wRePnRSOidBcH7r+UTg4eHhfYaXryI95/PK+h4eHh7eeFU9aQvoBRB5QPw12PDw8PA2eJPb6h3Ny99euYyHh4e3zas2jOYP62qYOwmOL8fBw8PDW+NVF596kUG1mM6bCd7k03h4eHhHedUhkng3n7K8paD3k+Dh4eFt8HpBbTUa6AUc1cg46onAw8PDG/Oq4WleBFfHSSbxQOsVHh4e3iFe9dFcDSzyqKIaZ0RH8fDw8NZ4kwd0EuwmsEkgEr3r8PDw8BZeCdFf+vGjPC+yq1OJh4eH9wReMnQvrs1fSHkw8d9nPDw8vA/yzpLyICNvujrcYoWHh4c3WEmvtghUy+J5w0Fh0vHw8PDWeL0L9Fqyyr0McVn/CxIPDw9vjZeHsNVYNm+0usfnR38JI/Dw8PDWeNWhX8WtN5Wj8fHw8PA+wusVwdXiOF/06k0NHh4e3jZv8ud/3iKQTFDCG2UteHh4eIN1ol4AUX5kFxe3elEFHh4e3jYvWZSaP76rWx5YXE4iHh4e3hovj1OjZfvxnmqqEEUSeHh4eEd5SeGbRxLJItZ80Ssqx/Hw8PCO8noFbm+BahL45gU9Hh4e3jav19KUl9TJhfNAtvoZDw8Pb4+XvwzmrQPVMKLaXtBMqfHw8PBavGqskMev97c4f4O9ORMPDw/vAbxq9FDdn7dzRefj4eHhPZiXR735qyIp+t8s4OHh4eGt8fLIoNdAkC9r9Rq/oqYrPDw8vEO8A3/440d8r3ROQttRwxYeHh5eyvsGzJ59giVfdQMAAAAASUVORK5CYII=' target="_blank">
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+        
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://caicaijs.github.io/2019/11/16/%E6%95%B0%E6%8D%AE%E5%BA%93/&title=数据库 | Caicai's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+      
+      
+          <div class="prev-next">
+              
+                  <section class="prev">
+                      <span class="art-item-left">
+                          <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;Previous</h6>
+                          <h4>
+                              <a href="/2019/11/16/Java%E9%9B%86%E5%90%88%E7%B1%BB/" rel="prev" title="Java集合类">
+                                
+                                    Java集合类
+                                
+                              </a>
+                          </h4>
+                          
+                              
+                              <h6 class="tags">
+                                  <a class="tag" href="/tags/Java%E9%9B%86%E5%90%88%E7%B1%BB/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> Java集合类</a>
+                              </h6>
+                          
+                      </span>
+                  </section>
+              
+              
+                  <section class="next">
+                      <span class="art-item-right" aria-hidden="true">
+                          <h6>Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                          <h4>
+                              <a href="/2019/11/16/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="prev" title="设计模式">
+                                  
+                                      设计模式
+                                  
+                              </a>
+                          </h4>
+                          
+                              
+                              <h6 class="tags">
+                                  <a class="tag" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 设计模式</a>
+                              </h6>
+                          
+                      </span>
+                  </section>
+              
+          </div>
+      
+      
+        <div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-keyboard-o"></i>
+      <span class="post-meta-item-text">  字数统计: </span>
+      <span class="post-count">5k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="fa fa-hourglass-half"></i>
+      <span class="post-meta-item-text">  阅读时长: </span>
+      <span class="post-count">17分</span>
+    </span>
+  </span>
+</div>
+
+      
+    </section>
+  </article>
+
+
+
+  <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments">
+    <section class="article typo">
+      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;Comments</h4>
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+    </section>
+  </article>
+
+
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: '数据库',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+    
+    
+      
+      
+        
+          
+          
+            
+              <section class='widget author'>
+  <div class='content pure'>
+    
+      <div class='avatar'>
+        <img class='avatar' src='/img/1.jpg'/>
+      </div>
+    
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="/"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://github.com/caicaijs"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://music.163.com/#/user/home?id=2044019913"
+              class="social fas fa-headphones-alt flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+            
+              
+  <section class='widget toc-wrapper'>
+    
+<header class='pure'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;TOC</div>
+  
+    <!-- <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer noopener" href="javascript:void(0)" target="_blank"><i class="fas fa-thumbtack fa-fw"></i></a></div> -->
+  
+</header>
+
+    <div class='content pure'>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、基础知识单元"><span class="toc-text">一、基础知识单元</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#一条SQL语句在MySQL中如何执行的？"><span class="toc-text">一条SQL语句在MySQL中如何执行的？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SQL执行顺序"><span class="toc-text">SQL执行顺序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、事务单元"><span class="toc-text">二、事务单元</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#什么是事务"><span class="toc-text">什么是事务?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#事物的特性-ACID"><span class="toc-text">事物的特性(ACID)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#并发事务带来的问题"><span class="toc-text">并发事务带来的问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#事务隔离级别"><span class="toc-text">事务隔离级别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL通过MVCC-解决读写并发问题-和间隙锁（解决写写并发问题）来解决幻读"><span class="toc-text">MySQL通过MVCC(解决读写并发问题)和间隙锁（解决写写并发问题）来解决幻读</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、MVCC多版本并发控制"><span class="toc-text">1、MVCC多版本并发控制</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、锁单元"><span class="toc-text">三、锁单元</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL-的锁机制"><span class="toc-text">MySQL 的锁机制</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、InnoDB实现了两种类型的行锁"><span class="toc-text">1、InnoDB实现了两种类型的行锁:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、InnoDB还有两个表锁："><span class="toc-text">2、InnoDB还有两个表锁：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、事务可以通过以下语句显示加共享锁或排他锁："><span class="toc-text">3、事务可以通过以下语句显示加共享锁或排他锁：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4、死锁的产生与避免"><span class="toc-text">4、死锁的产生与避免</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1死锁"><span class="toc-text">4.1死锁:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2避免死锁"><span class="toc-text">4.2避免死锁:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、优化单元"><span class="toc-text">四、优化单元</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#大表优化"><span class="toc-text">大表优化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL-explain详解"><span class="toc-text">MySQL explain详解</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL优化"><span class="toc-text">MySQL优化</span></a></li></ol>
+    </div>
+  </section>
+
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            
+              <section class='widget grid'>
+  
+<header class='pure'>
+  <div><i class="fas fa-map-signs fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;站内导航</div>
+  
+</header>
+
+  <div class='content pure'>
+    <ul class="grid navgation">
+      
+        <li><a class="flat-box" title="/" href="/"
+          
+          
+          id="home">
+          
+            <i class="fas fa-clock fa-fw" aria-hidden="true"></i>
+          
+          近期文章
+        </a></li>
+      
+        <li><a class="flat-box" title="/archives/" href="/archives/"
+          
+            rel="nofollow"
+          
+          
+          id="archives">
+          
+            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
+          
+          文章归档
+        </a></li>
+      
+        <li><a class="flat-box" title="https://github.com/caicaijs" href="https://github.com/caicaijs"
+          
+          
+          id="https:github.comcaicaijs">
+          
+            <i class="fas fa-code-branch fa-fw" aria-hidden="true"></i>
+          
+          开源项目
+        </a></li>
+      
+        <li><a class="flat-box" title="/friends/" href="/friends/"
+          
+            rel="nofollow"
+          
+          
+          id="friends">
+          
+            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
+          
+          我的友链
+        </a></li>
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/"
+          
+            rel="nofollow"
+          
+          
+          id="https:xaoxuu.comwikimaterial-x">
+          
+            <i class="fas fa-book fa-fw" aria-hidden="true"></i>
+          
+          主题文档
+        </a></li>
+      
+        <li><a class="flat-box" title="/about/" href="/about/"
+          
+            rel="nofollow"
+          
+          
+          id="about">
+          
+            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
+          
+          关于小站
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            
+              
+  <section class='widget category'>
+    
+<header class='pure'>
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Categories</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/categories/"
+    title="categories/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="/categories/Hexo/" href="/categories/Hexo/"><div class='name'>Hexo</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/JVM/" href="/categories/JVM/"><div class='name'>JVM</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Java%E5%9F%BA%E7%A1%80/" href="/categories/Java%E5%9F%BA%E7%A1%80/"><div class='name'>Java基础</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" href="/categories/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/"><div class='name'>Java多线程</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Java%E5%B8%B8%E7%94%A8API/" href="/categories/Java%E5%B8%B8%E7%94%A8API/"><div class='name'>Java常用API</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Java%E9%9B%86%E5%90%88%E7%B1%BB/" href="/categories/Java%E9%9B%86%E5%90%88%E7%B1%BB/"><div class='name'>Java集合类</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/MySQL/" href="/categories/MySQL/"><div class='name'>MySQL</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"><div class='name'>设计模式</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            
+              
+  <section class='widget tagcloud'>
+    
+<header class='pure'>
+  <div><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Hot Tags</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/tags/"
+    title="tags/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <a href="/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/tags/JVM/" style="font-size: 14px; color: #999">JVM</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 14px; color: #999">Java基础</a> <a href="/tags/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 14px; color: #999">Java多线程</a> <a href="/tags/Java%E5%B8%B8%E7%94%A8API/" style="font-size: 14px; color: #999">Java常用API</a> <a href="/tags/Java%E9%9B%86%E5%90%88%E7%B1%BB/" style="font-size: 14px; color: #999">Java集合类</a> <a href="/tags/MySQL/" style="font-size: 14px; color: #999">MySQL</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 14px; color: #999">设计模式</a>
+    </div>
+  </section>
+
+
+            
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            
+              
+
+
+  <section class='widget music'>
+    
+<header class='pure'>
+  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;最近在听</div>
+  
+    <a class="rightBtn"
+    
+      rel="external nofollow noopener noreferrer"
+    
+    
+      target="_blank"
+    
+    href="https://music.163.com/#/user/home?id=2044019913"
+    title="https://music.163.com/#/user/home?id=2044019913">
+    <i class="far fa-heart fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+  <div class="aplayer"
+    data-theme="#1BCDFC"
+    
+    
+    data-mode="circulation"
+    data-server="netease"
+    data-type="playlist"
+    data-id="3074522060"
+    data-volume="0.7">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
+
+    </div>
+  </section>
+
+
+            
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+    
+
+  
+</aside>
+
+<footer id="footer" class="clearfix">
+  
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="/"
+            class="social fas fa-rss flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="/"
+            class="social fas fa-envelope flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://github.com/caicaijs"
+            class="social fab fa-github flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://music.163.com/#/user/home?id=2044019913"
+            class="social fas fa-headphones-alt flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+    </div>
+  
+  <br>
+  <div><p>Blog content follows the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+</div>
+  <div>
+    Use
+    <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a>
+    as theme
+    
+      , 
+      total visits
+      <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+      times
+    
+    . 
+  </div>
+  <div>
+    <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+    <script>
+        var now = new Date(); 
+        function createtime() { 
+            var grt= new Date("11/11/2019 11:11:11");//在此处修改你的建站时间
+            now.setTime(now.getTime()+250); 
+            days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+            if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+            mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+            snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+            document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+            document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+        } 
+      setInterval("createtime()",250);
+    </script>
+    <i class="fas fa-chart-area"></i>
+    <span class="post-count">总字数：53.9k</span>
+  </div>
+</footer>
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)' target="_blank" rel="noopener"></a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
+
+
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        if ('.cover') {
+          $('.cover').backstretch(
+          ["https://img.vim-cn.com/29/91197b04c13f512f734a76d4ac422d89dbe229.jpg"],
+          {
+            duration: "6000",
+            fade: "2500"
+          });
+        } else {
+          $.backstretch(
+          ["https://img.vim-cn.com/29/91197b04c13f512f734a76d4ac422d89dbe229.jpg"],
+          {
+            duration: "6000",
+            fade: "2500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+    
+      <script src="https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0.6/js/volantis.min.js"></script>
+    
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var notify = 'true' == true;
+  var verify = 'true' == true;
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    notify: notify,
+    verify: verify,
+    guest_info: guest_info,
+    
+    appId: "OWgqsgcUcUMvEgM8887KxyAr-gzGzoHsz",
+    appKey: "kIdSp6cV6FnndEVpleIECjst",
+    placeholder: "快来评论吧~",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'zh-cn',
+    highlight:'true'
+  })
+  </script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.9/js/app.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.9/js/search.js"></script>
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "Copied";
+  let COPY_FAILURE = "Copy failed";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>Copy</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+  <!--动态线条背景-->
+  <script type="text/javascript"
+    color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+  </script>
+</body>
+</html>
